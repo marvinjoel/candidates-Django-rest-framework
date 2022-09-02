@@ -28,7 +28,10 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    'candidates.presidency',
+    'candidates.vpresidency',
+]
 
 THIRD_PARTY_APPS = [
     'rest_framework',
