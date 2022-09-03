@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from candidates.presidency.models import PresidencyModel
+
+admin.site.register(PresidencyModel)

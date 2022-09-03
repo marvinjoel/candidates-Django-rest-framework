@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from candidates.vpresidency.models import ParAndinoModel, CongresistaModel
+
+admin.site.register(CongresistaModel)
+admin.site.register(ParAndinoModel)
