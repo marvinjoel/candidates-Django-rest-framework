@@ -39,10 +39,10 @@ class PresidencyModel(models.Model):
     def photo_cant(self):
         return mark_safe(f'<img src="{self.photo}" width=50px height=50px />')
 
-    first_name = models.CharField(max_length=150)
-    last_name = models.CharField(max_length=150)
-    birthday = models.DateField(default=datetime.now)
-    photo = models.ImageField(upload_to=pre_url, blank=True, null=True)
+    first_name_pres = models.CharField(max_length=150)
+    last_name_pres = models.CharField(max_length=150)
+    birthday_pres = models.DateField(default=datetime.now)
+    photo_pres = models.ImageField(upload_to=pre_url, blank=True, null=True)
 
     studes = models.ManyToManyField(Studies, blank=True, null=True)
     politic_part = models.OneToOneField(PoliticModel, on_delete=models.CASCADE, blank=True)
@@ -51,7 +51,7 @@ class PresidencyModel(models.Model):
     parlamento_andino = models.ForeignKey(ParAndinoModel, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.first_name
+        return self.first_name_pres
 
     class Meta:
         verbose_name = 'Presiden'
